@@ -27,8 +27,8 @@ fn part1(mut all_seqs: Vec<Vec<i32>>) -> i32 {
 fn part2(mut all_seqs: Vec<Vec<i32>>) -> i32 {
 
     for i in (1..all_seqs.len()).rev() {
-        let first_val = all_seqs[i].first().cloned().unwrap();
-        let prior_first_val = all_seqs[i-1].first().cloned().unwrap();
+        let first_val: i32 = all_seqs[i].first().cloned().unwrap();
+        let prior_first_val: i32 = all_seqs[i-1].first().cloned().unwrap();
         all_seqs[i-1].insert(0, prior_first_val - first_val);
     }
 
